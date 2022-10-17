@@ -6,7 +6,7 @@ class Users extends Component {
 
     render() {
         // const users = this.props.User;
-        const { Users } = this.props;
+        const { Users,deleteUser } = this.props;
 
         return (
             <table className="table table-dark">
@@ -21,7 +21,7 @@ class Users extends Component {
                 <tbody>
                     {Users.map(User => {
                         const { id, name, email } = User;
-                        return <User key={id} id={id} name={name} email={email} />
+                        return <User key={id} id={id} name={name} email={email} deleteUser = {deleteUser} />
                     })}
                 </tbody>
 

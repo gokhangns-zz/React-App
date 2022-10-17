@@ -1,31 +1,33 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 
-class User extends Component{
+class User extends Component {
 
     // constructor(props){
     //     super(props);
 
     //     this.onDeleteClick = this.onDeleteClick.bind(this);
     // }
-    onDeleteClick(id,e) {
-        console.log("ID:",id);
+    onDeleteClick(id, e) {
+        const { deleteUser } = this.props;
+        deleteUser(id);
+
 
         // console.log("Clicked");
         // console.log(this);
-        
+
     }
     // onDeleteClick = e => {
     //     console.log("Clicked");
     //     console.log(this);
-        
+
     // }
 
 
-    render(){
-        const {id, name, email} = this.props;
+    render() {
+        const { id, name, email } = this.props;
 
-        return(
+        return (
             <tr>
                 <td>{id}</td>
                 <th>{name}</th>
