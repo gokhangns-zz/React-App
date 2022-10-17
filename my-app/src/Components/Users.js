@@ -4,6 +4,7 @@ import React, { Component } from "react";
 
 class Users extends Component {
 
+   
     render() {
         // const users = this.props.User;
         const { Users,deleteUser } = this.props;
@@ -25,15 +26,15 @@ class Users extends Component {
                     })}
                 </tbody>
 
-                {/* <tbody>
-                    {Users.map(user => {
+                <tbody>
+                    {Users.map(User => {
                         const { id, name, email } = User;
 
                         return <User key={id} id={id} name={name} email={email} />;
 
                     })}
 
-                </tbody> */}
+                </tbody>
 
             </table>
         );
